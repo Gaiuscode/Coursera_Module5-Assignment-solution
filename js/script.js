@@ -60,6 +60,7 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (homeHtml) {
       var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
       
     },
     false);

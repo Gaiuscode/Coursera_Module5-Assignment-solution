@@ -52,13 +52,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  [...],
+  buildAndShowHomeHTML,
   true);
 });
 function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
+      var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+      
     },
     false);
 }
